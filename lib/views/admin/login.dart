@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import '../api/user_api.dart';
+import '../../api/user_api.dart';
 import 'home.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class LoginAdmin extends StatefulWidget {
+  const LoginAdmin({Key? key}) : super(key: key);
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _LoginAdminState createState() => _LoginAdminState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginAdminState extends State<LoginAdmin> {
   // form key
   final _formKey = GlobalKey<FormState>();
 
@@ -121,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Fluttertoast.showToast(msg: "Login Successful");
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (context) =>
-                        Home()));
+                        HomeAdmin()));
 
               }),
             });
@@ -187,7 +187,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Fluttertoast.showToast(msg: "Login Successful");
             Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) =>
-                    Home()));
+                    HomeAdmin()));
 
           }),
         });
